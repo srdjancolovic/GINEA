@@ -1,0 +1,173 @@
+@import './vars.scss';
+@import './global.scss';
+.navigation {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    padding: 15px 0;
+    transition: $transition;
+
+    &--scrolled {
+        background-color: $primary-green;
+    }
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--green-bg {
+        background-color: $primary-green;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__hamburger {
+        @include mq('from', 769) {
+            display: none;
+        }
+
+        padding: 5px;
+        border: none;
+        outline: none;
+        background: none;
+        margin-right: -5px;
+        cursor: pointer;
+        position: relative;
+        width: 35px;
+        height: 20px;
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+
+        span {
+            width: 25px;
+            height: 2px;
+            display: block;
+            background-color: $white;
+            position: absolute;
+            transition: $transition;
+
+            &:nth-child(1) {
+                top: 2px;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3) {
+                bottom: 2px;
+            }
+        }
+
+        &--toggle {
+            span {
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: rotate(-135deg) translateY(50%);
+                }
+                &:nth-child(2) {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    bottom: 50%;
+                    transform: rotate(135deg) translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        @include mq('to', 769) {
+            position: absolute;
+            background-color: $white;
+            top: 74px;
+            width: 100%;
+            right: -100%;
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+            transition: $transition;
+        }
+
+        &--show {
+            @include mq('to', 769) {
+                right: 0;
+                transition: $transition;
+            }
+        }
+
+        li {
+            margin-left: 30px;
+
+            @include mq('to', 769) {
+                margin-left: 0;
+                background-color: $primary-green;
+                text-align: center;
+                border-radius: 5px;
+                width: 100%;
+            }
+
+            &:first-child {
+                margin-left: 0;
+
+                @include mq('to', 769) {
+                    margin-top: 40px;
+                }
+            }
+
+            &:not(:first-child) {
+                @include mq('to', 769) {
+                    margin-top: 15px;
+                }
+            }
+
+            a {
+                color: $white;
+                text-transform: uppercase;
+                position: relative;
+                font-size: 18px;
+                line-height: 20px;
+                letter-spacing: 0.5px;
+                width: 100%;
+
+                @include mq('to', 769) {
+                    display: block;
+                    padding: 15px 0;
+                    border-radius: 5px;
+                    background-color: $primary-green;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 3px;
+                    left: 0;
+                    background-color: $white;
+                    display: block;
+                    transform: scaleX(0);
+                    transition: $transition;
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        &::after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
