@@ -1,0 +1,9 @@
+@import './vars.scss';
+.progress-bar {
+    height: 5px;
+    position: fixed;
+    z-index: 21;
+    background-color: $white;
+    border-radius: 2px;
+    transition: $transition;
+}

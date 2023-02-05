@@ -33,19 +33,75 @@
     overflow: hidden;
 }
 
-h1,
-h2 {
-    color: $white;
-}
-
 h1 {
-    font-size: 48px;
-    line-height: 52px;
+    letter-spacing: 1px;
+    @include mq('from', 768) {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    @include mq('to', 768) {
+        font-size: 42px;
+        line-height: 46px;
+    }
 }
 
 h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-weight: normal;
+    position: relative;
+    width: fit-content;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        background-color: $primary-green;
+        border-radius: 4px;
+        left: 0;
+    }
+
+    &::after {
+        width: 100%;
+        bottom: -3px;
+    }
+
+    @include mq('from', 768) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @include mq('to', 768) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+h3 {
+    font-weight: normal;
+
+    @include mq('from', 768) {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    @include mq('to', 768) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+p {
+    font-size: 18px;
+    color: $dark-grey;
+    line-height: 1.6;
+
+    @include mq('from', 768) {
+        font-size: 18px;
+    }
+
+    @include mq('to', 768) {
+        font-size: 17px;
+    }
 }
 
 a {
@@ -63,23 +119,48 @@ li {
 
 .container {
     max-width: 1440px;
-    padding: 0 30px;
     margin: 0 auto;
 
+    @include mq('from', 769) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     @include mq('to', 769) {
-        padding: 0 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &--section {
+        @include mq('from', 769) {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        @include mq('to', 769) {
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
     }
 }
 
 .btn {
-    font-size: 18px;
-    line-height: 20px;
     background-color: $primary-green;
     color: $white;
     text-transform: uppercase;
     padding: 15px 25px;
     border-radius: 4px;
     position: relative;
+
+    @include mq('from', 768) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    @include mq('to', 768) {
+        font-size: 17px;
+        line-height: 19px;
+    }
 
     &::after {
         content: '';
@@ -88,7 +169,7 @@ li {
         height: 0;
         left: 0;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.3);
         border-radius: 4px;
         transition: $transition;
     }

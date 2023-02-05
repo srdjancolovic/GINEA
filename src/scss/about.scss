@@ -1,0 +1,135 @@
+@import './vars.scss';
+@import './global.scss';
+
+.about {
+    &__content {
+        display: flex;
+
+        @include mq('to', 768) {
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        display: flex;
+
+        @include mq('from', 768) {
+            justify-content: flex-start;
+        }
+
+        @include mq('to', 768) {
+            justify-content: center;
+        }
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    &__left-side {
+        @include mq('from', 768) {
+            max-width: 65%;
+        }
+
+        @include mq('to', 768) {
+            max-width: 100%;
+        }
+
+        p {
+            margin: 40px 0 32px;
+        }
+    }
+
+    &__right-side {
+        @include mq('from', 768) {
+            width: 40%;
+            margin-left: 50px;
+        }
+
+        @include mq('to', 768) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 80px;
+        }
+
+        ul {
+            margin-top: 40px;
+
+            li {
+                padding-left: 25px;
+                position: relative;
+                text-transform: uppercase;
+                color: $dark-grey;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    width: 8px;
+                    height: 8px;
+                    background-color: $primary-green;
+                    border-radius: 2px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    &__service {
+        background-color: $white;
+        color: $dark-grey;
+        border-radius: 4px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.31);
+
+        @include mq('from', 768) {
+            padding: 20px 30px;
+        }
+
+        @include mq('to', 768) {
+            padding: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        img {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+
+            @include mq('from', 768) {
+                left: -20px;
+                top: -20px;
+            }
+
+            @include mq('to', 768) {
+                right: -5px;
+                top: -20px;
+            }
+        }
+
+        ul {
+            width: 100%;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
