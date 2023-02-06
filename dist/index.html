@@ -19,23 +19,33 @@
 
         <nav class="navigation">
             <div class="navigation__wrapper container">
-                <img
-                    src="./assets/gineaLogo.webp"
-                    class="navigation__logo"
-                    alt="Logo"
-                />
+                <a href="#main">
+                    <img
+                        src="./assets/gineaLogo.webp"
+                        class="navigation__logo"
+                        alt="Logo"
+                    />
+                </a>
                 <ul class="navigation__menu">
                     <li>
-                        <a href="#" class="navigation__menu-link">Pocetna</a>
+                        <a href="#main" class="navigation__menu-link"
+                            >Pocetna</a
+                        >
                     </li>
                     <li>
-                        <a href="#" class="navigation__menu-link">O nama</a>
+                        <a href="#about" class="navigation__menu-link"
+                            >O nama</a
+                        >
                     </li>
                     <li>
-                        <a href="#" class="navigation__menu-link">Cjenovnik</a>
+                        <a href="#price" class="navigation__menu-link"
+                            >Cjenovnik</a
+                        >
                     </li>
                     <li>
-                        <a href="#" class="navigation__menu-link">Kontakt</a>
+                        <a href="#contact" class="navigation__menu-link"
+                            >Kontakt</a
+                        >
                     </li>
                 </ul>
 
@@ -47,7 +57,7 @@
             </div>
         </nav>
 
-        <main class="landing">
+        <main class="landing" id="main">
             <div class="landing__heading-btn">
                 <h1>GINEA</h1>
                 <span>Zdravstvena ustnaova</span>
@@ -94,6 +104,67 @@
                             <li>Fetalna ehokardiografija</li>
                             <li>Hematologija</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div
+                class="contact container container--section container--contact"
+            >
+                <h2>Kontakt</h2>
+
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__info-boxes-wrapper">
+                            <div class="contact__info-box">
+                                <i class="icon-instagram"></i>
+                                <p>Adresa</p>
+                                <span>Ul. Jasenovačkih logoraša 9</span>
+                                <span>Banja Luka 78000</span>
+                            </div>
+
+                            <div class="contact__info-box">
+                                <i class="icon-email"></i>
+                                <p>Telefon</p>
+                                <a href="tel:+38765033777">+38765033777</a>
+                            </div>
+                        </div>
+
+                        <div class="contact__info-boxes-wrapper">
+                            <div class="contact__info-box">
+                                <i class="icon-email"></i>
+                                <p>Email</p>
+                                <a href="mailto:ginea@info.com" target="_blank"
+                                    >ginea@info.com</a
+                                >
+                            </div>
+
+                            <div
+                                class="contact__info-box contact__info-box--added-margin"
+                            >
+                                <i class="icon-instagram"></i>
+                                <p>Instagram</p>
+                                <a
+                                    href="https://www.instagram.com/ginea.bl/?hl=en"
+                                    target="_blank"
+                                    >ginea.bl</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact__map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.834338160561!2d17.195893915534135!3d44.763793179098826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e037dae1b2f2d%3A0x6385466df21e1108!2sZdravstvena%20ustanova%20GINEA!5e0!3m2!1sen!2sba!4v1675673194895!5m2!1sen!2sba"
+                            width=""
+                            height=""
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
                     </div>
                 </div>
             </div>

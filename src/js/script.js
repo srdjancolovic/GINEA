@@ -47,7 +47,6 @@ hamburger.addEventListener('click', () => {
 
 navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
         toggleFn();
     });
 });

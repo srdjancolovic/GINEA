@@ -1,0 +1,168 @@
+@import './vars.scss';
+@import './global.scss';
+
+#contact {
+    background-color: $light-black;
+}
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        color: $white;
+    }
+
+    &__content {
+        margin-top: 60px;
+        width: 100%;
+        display: flex;
+
+        @include mq('from', 1025) {
+            justify-content: space-between;
+        }
+
+        @include mq('to', 1025) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include mq('to', 768) {
+            margin-top: 60px;
+        }
+    }
+
+    &__info {
+        display: flex;
+
+        @include mq('from', 1025) {
+            width: 50%;
+        }
+
+        @include mq('to', 1025) {
+            width: 100%;
+        }
+
+        @include mq('to', 768) {
+            flex-direction: column;
+        }
+    }
+
+    &__info-boxes-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include mq('to', 1025) {
+            text-align: center;
+        }
+    }
+
+    &__info-box {
+        transform: translateY(15px);
+
+        @include mq('from', 1025) {
+            transform: translateY(15px);
+        }
+
+        @include mq('to', 1025) {
+            transform: translateY(0);
+        }
+
+        &:last-child {
+            margin-top: 40px;
+
+            @include mq('to', 768) {
+                margin-top: 0;
+            }
+        }
+
+        @include mq('to', 768) {
+            margin-bottom: 60px;
+        }
+
+        &--added-margin {
+            transform: translateY(42px);
+
+            @include mq('from', 1025) {
+                transform: translateY(42px);
+            }
+
+            @include mq('fromto', 768, 1025) {
+                transform: translateY(28px);
+            }
+
+            @include mq('to', 768) {
+                transform: translateY(0);
+            }
+        }
+
+        i,
+        p,
+        span,
+        a {
+            color: $light-grey;
+        }
+
+        p {
+            text-transform: uppercase;
+        }
+
+        span,
+        a {
+            display: block;
+        }
+
+        span {
+            margin-top: 8px;
+        }
+
+        a {
+            transition: $transition;
+            margin: 8px auto 0;
+
+            @media (hover: hover) {
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        i {
+            padding: 12px;
+            border: 2px solid $light-grey;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        p {
+            margin-top: 24px;
+        }
+    }
+
+    &__map {
+        height: 300px;
+        border-radius: 4px;
+
+        @include mq('from', 1025) {
+            width: 45%;
+        }
+
+        @include mq('fromto', 768, 1025) {
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        @include mq('to', 768) {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+    }
+}

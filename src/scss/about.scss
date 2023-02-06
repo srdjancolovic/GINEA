@@ -1,6 +1,10 @@
 @import './vars.scss';
 @import './global.scss';
 
+#about {
+    @include navOffset;
+}
+
 .about {
     &__content {
         display: flex;

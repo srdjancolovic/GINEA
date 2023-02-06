@@ -50,6 +50,7 @@ h2 {
     font-weight: normal;
     position: relative;
     width: fit-content;
+    text-transform: uppercase;
 
     &::after {
         content: '';
@@ -58,9 +59,6 @@ h2 {
         background-color: $primary-green;
         border-radius: 4px;
         left: 0;
-    }
-
-    &::after {
         width: 100%;
         bottom: -3px;
     }
@@ -142,6 +140,18 @@ li {
             padding-bottom: 40px;
         }
     }
+
+    &--contact {
+        @include mq('from', 769) {
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+
+        @include mq('to', 769) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
 }
 
 .btn {
@@ -180,6 +190,15 @@ li {
                 height: 100%;
             }
         }
+    }
+}
+
+@mixin navOffset {
+    &::before {
+        content: '';
+        display: block;
+        height: 89px;
+        margin-top: -89px;
     }
 }
 
