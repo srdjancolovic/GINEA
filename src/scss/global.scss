@@ -34,7 +34,9 @@
 }
 
 h1 {
+    color: $white;
     letter-spacing: 1px;
+
     @include mq('from', 768) {
         font-size: 48px;
         line-height: 52px;
@@ -76,6 +78,7 @@ h2 {
 
 h3 {
     font-weight: normal;
+    color: $white;
 
     @include mq('from', 768) {
         font-size: 28px;
@@ -130,15 +133,8 @@ li {
     }
 
     &--section {
-        @include mq('from', 769) {
-            padding-top: 80px;
-            padding-bottom: 40px;
-        }
-
-        @include mq('to', 769) {
-            padding-top: 80px;
-            padding-bottom: 40px;
-        }
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     &--contact {
@@ -197,33 +193,15 @@ li {
     &::before {
         content: '';
         display: block;
-        height: 89px;
-        margin-top: -89px;
-    }
-}
 
-.social-btn {
-    color: $white;
-    z-index: 1;
-    position: absolute;
-    padding: 10px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid $white;
+        @include mq('from', 769) {
+            height: 82px;
+            margin-top: -82px;
+        }
 
-    i {
-        font-size: 25px;
-        color: $white;
-        transition: $transition;
-    }
-
-    @media (hover: hover) {
-        &:hover {
-            i {
-                transform: scale(1.1);
-            }
+        @include mq('to', 769) {
+            height: 70px;
+            margin-top: -70px;
         }
     }
 }

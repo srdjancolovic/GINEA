@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <!-- Theme color -->
+        <meta name="theme-color" content="#39d2aa" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -15,11 +17,24 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="preloader__content">
+                <img src="./assets/spiner.svg" alt="Spinner" />
+            </div>
+        </div>
+
+        <a href="#main" class="top-btn smooth-scroll"
+            ><i class="icon-arrow"></i
+        ></a>
+
+        <!-- Progress bar -->
         <div class="progress-bar"></div>
 
+        <!-- Navigation -->
         <nav class="navigation">
             <div class="navigation__wrapper container">
-                <a href="#main">
+                <a href="#main" class="smooth-scroll">
                     <img
                         src="./assets/gineaLogo.webp"
                         class="navigation__logo"
@@ -29,7 +44,7 @@
                 <ul class="navigation__menu">
                     <li>
                         <a href="#main" class="navigation__menu-link"
-                            >Pocetna</a
+                            >Početna</a
                         >
                     </li>
                     <li>
@@ -38,7 +53,7 @@
                         >
                     </li>
                     <li>
-                        <a href="#price" class="navigation__menu-link"
+                        <a href="#pricing" class="navigation__menu-link"
                             >Cjenovnik</a
                         >
                     </li>
@@ -59,23 +74,21 @@
 
         <main class="landing" id="main">
             <div class="landing__heading-btn">
-                <h1>GINEA</h1>
-                <span>Zdravstvena ustnaova</span>
-                <a href="#" class="landing__about-btn btn">O Nama</a>
+                <h1 class="landing__heading-main">GINEA</h1>
+                <h3 class="landing__subheading">
+                    Specijalistička ginekološka ambulanta
+                </h3>
+                <a href="#about" class="landing__about-btn btn">O Nama</a>
             </div>
-
-            <!-- <a href="" class="landing__instagram-link social-btn"
-                ><i class="icon-instagram"></i
-            ></a> -->
         </main>
 
         <section id="about">
             <div class="container container--section about">
                 <div class="about__content">
                     <div class="about__left-side">
-                        <h2 class="about__heading">O nama</h2>
+                        <h2 class="about__heading scaleIn">O nama</h2>
 
-                        <p class="about__text">
+                        <p class="about__text slideInUp">
                             U našem timu su dvije iskusne doktorice, Brankica
                             Đukić-Kukolj i Mirjana Ostojić. Obje su specijalisti
                             ginekologije i akušerstva sa višegodišnjim iskustvom
@@ -90,21 +103,104 @@
                             dvije medicinske sestre, Ljilja Topić sa
                             dugogodišnjim iskustvom i Sara Rakita.
                         </p>
-                        <div class="about__btn">
-                            <a href="#" class="btn">Kontakt</a>
+                        <div class="about__btn slideInUp">
+                            <a href="#contact" class="btn">Kontakt</a>
                         </div>
                     </div>
 
                     <div class="about__right-side">
-                        <h2>Usluge</h2>
+                        <h2 class="scaleIn">Usluge</h2>
                         <ul>
-                            <li>Ultrazvuk abdomena</li>
-                            <li>Ultrazvuk dojke</li>
-                            <li>Ultrazvuk stitaste zlijezde</li>
-                            <li>Fetalna ehokardiografija</li>
-                            <li>Hematologija</li>
+                            <li class="slideInUp">Ultrazvuk abdomena</li>
+                            <li class="slideInUp">Ultrazvuk dojke</li>
+                            <li class="slideInUp">
+                                Ultrazvuk stitaste zlijezde
+                            </li>
+                            <li class="slideInUp">Fetalna ehokardiografija</li>
+                            <li class="slideInUp">Hematologija</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <div class="pricing">
+                <div
+                    class="pricing__content container container--section pricing__overlay"
+                >
+                    <h2>Cjenovnik</h2>
+
+                    <div class="pricing__boxes">
+                        <div class="pricing__box">
+                            <h3>Cijenovnik 1</h3>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                        </div>
+
+                        <div class="pricing__box">
+                            <h3>Cijenovnik 2</h3>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">
+                                    Ovo je neki duzi naziv kojie se ovde nalazi
+                                </p>
+                                <span class="pricing__price">1199.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">1199.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">199.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                            <div class="pricing__box-item">
+                                <p class="pricing__item-name">Naziv usluge</p>
+                                <span class="pricing__price">99.99 KM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing__wrap">
+                    <div class="pricing__bg"></div>
                 </div>
             </div>
         </section>
@@ -113,49 +209,86 @@
             <div
                 class="contact container container--section container--contact"
             >
-                <h2>Kontakt</h2>
+                <h2 class="scaleIn">Kontakt</h2>
 
                 <div class="contact__content">
                     <div class="contact__info">
                         <div class="contact__info-boxes-wrapper">
-                            <div class="contact__info-box">
-                                <i class="icon-instagram"></i>
-                                <p>Adresa</p>
-                                <span>Ul. Jasenovačkih logoraša 9</span>
-                                <span>Banja Luka 78000</span>
+                            <div class="contact__info-box slideInUp">
+                                <div class="contact__info-box-link">
+                                    <a href="tel:+38765033777"
+                                        ><i class="icon-telephone"></i
+                                    ></a>
+                                </div>
+                                <p>Telefon</p>
+                                <div class="contact__info-box-link">
+                                    <a href="tel:+38765033777">+38765033777</a>
+                                </div>
                             </div>
 
-                            <div class="contact__info-box">
-                                <i class="icon-email"></i>
-                                <p>Telefon</p>
-                                <a href="tel:+38765033777">+38765033777</a>
+                            <div class="contact__info-box slideInUp">
+                                <div class="contact__info-box-link">
+                                    <a
+                                        href="https://www.instagram.com/ginea.bl/?hl=en"
+                                        target="_blank"
+                                        ><i class="icon-instagram"></i
+                                    ></a>
+                                </div>
+
+                                <p>Instagram</p>
+                                <div class="contact__info-box-link">
+                                    <a
+                                        href="https://www.instagram.com/ginea.bl/?hl=en"
+                                        target="_blank"
+                                        >ginea.bl</a
+                                    >
+                                </div>
                             </div>
                         </div>
 
                         <div class="contact__info-boxes-wrapper">
-                            <div class="contact__info-box">
-                                <i class="icon-email"></i>
+                            <div class="contact__info-box slideInUp">
+                                <div class="contact__info-box-link">
+                                    <a
+                                        href="mailto:ginea@info.com"
+                                        target="_blank"
+                                        ><i class="icon-email"></i
+                                    ></a>
+                                </div>
                                 <p>Email</p>
-                                <a href="mailto:ginea@info.com" target="_blank"
-                                    >ginea@info.com</a
-                                >
+                                <div class="contact__info-box-link">
+                                    <a
+                                        href="mailto:ginea@info.com"
+                                        target="_blank"
+                                        >ginea@info.com</a
+                                    >
+                                </div>
                             </div>
 
-                            <div
-                                class="contact__info-box contact__info-box--added-margin"
-                            >
-                                <i class="icon-instagram"></i>
-                                <p>Instagram</p>
-                                <a
-                                    href="https://www.instagram.com/ginea.bl/?hl=en"
-                                    target="_blank"
-                                    >ginea.bl</a
-                                >
+                            <div class="contact__info-box slideInUp">
+                                <div class="contact__info-box-link">
+                                    <a
+                                        href="https://goo.gl/maps/BwC5Kj95Mzoxd1A88"
+                                        target="_blank"
+                                        ><i class="icon-location"></i
+                                    ></a>
+                                </div>
+                                <p>Adresa</p>
+                                <div class="contact__info-box-link">
+                                    <a
+                                        href="https://goo.gl/maps/BwC5Kj95Mzoxd1A88"
+                                        target="_blank"
+                                        ><span
+                                            >Ul. Jasenovačkih logoraša 9</span
+                                        >
+                                        <span>Banja Luka 78000</span></a
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="contact__map">
+                    <div class="contact__map slideInUp">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.834338160561!2d17.195893915534135!3d44.763793179098826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e037dae1b2f2d%3A0x6385466df21e1108!2sZdravstvena%20ustanova%20GINEA!5e0!3m2!1sen!2sba!4v1675673194895!5m2!1sen!2sba"
                             width=""
@@ -167,9 +300,21 @@
                         ></iframe>
                     </div>
                 </div>
+
+                <div class="contact__copyright slideInUp">
+                    <span>©GINEA 2023.</span>
+                    <a href="https://srdjancolovic.com/" target="_blank"
+                        >Website by Srdjan Colovic</a
+                    >
+                </div>
             </div>
         </section>
 
+        <!-- Gsap -->
+        <script src="./js/gsap.js"></script>
+        <!-- Jquery -->
+        <script src="./js/jquery.js"></script>
+        <!-- JS script -->
         <script src="./js/script.js"></script>
     </body>
 </html>

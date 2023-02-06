@@ -11,9 +11,8 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    h1,
-    span {
-        color: $white;
+    h3 {
+        font-size: 25px;
     }
 
     &::after {

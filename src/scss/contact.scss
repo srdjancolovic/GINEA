@@ -3,6 +3,7 @@
 
 #contact {
     background-color: $light-black;
+    @include navOffset;
 }
 .contact {
     width: 100%;
@@ -55,15 +56,14 @@
         flex-direction: column;
 
         @include mq('to', 1025) {
+            align-items: center;
             text-align: center;
         }
     }
 
     &__info-box {
-        transform: translateY(15px);
-
         @include mq('from', 1025) {
-            transform: translateY(15px);
+            transform: translateY(5px);
         }
 
         @include mq('to', 1025) {
@@ -82,22 +82,6 @@
             margin-bottom: 60px;
         }
 
-        &--added-margin {
-            transform: translateY(42px);
-
-            @include mq('from', 1025) {
-                transform: translateY(42px);
-            }
-
-            @include mq('fromto', 768, 1025) {
-                transform: translateY(28px);
-            }
-
-            @include mq('to', 768) {
-                transform: translateY(0);
-            }
-        }
-
         i,
         p,
         span,
@@ -107,6 +91,9 @@
 
         p {
             text-transform: uppercase;
+            margin-top: 24px;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         span,
@@ -116,6 +103,7 @@
 
         span {
             margin-top: 8px;
+            transition: $transition;
         }
 
         a {
@@ -125,6 +113,14 @@
             @media (hover: hover) {
                 &:hover {
                     color: $white;
+
+                    span {
+                        color: $white;
+                    }
+
+                    i {
+                        color: $white;
+                    }
                 }
             }
         }
@@ -133,11 +129,17 @@
             padding: 12px;
             border: 2px solid $light-grey;
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 20px;
+            transition: $transition;
         }
+    }
 
-        p {
-            margin-top: 24px;
+    &__info-box-link {
+        width: fit-content;
+
+        @include mq('to', 1025) {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -163,6 +165,41 @@
             width: 100%;
             height: 100%;
             border-radius: 4px;
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        display: flex;
+        margin-top: 60px;
+
+        @include mq('from', 768) {
+            justify-content: space-between;
+        }
+
+        @include mq('to', 768) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        span,
+        a {
+            color: $light-grey;
+            font-size: 14px;
+        }
+
+        a {
+            transition: $transition;
+
+            @media (hover: hover) {
+                &:hover {
+                    color: $white;
+                }
+            }
+
+            @include mq('to', 768) {
+                margin-top: 10px;
+            }
         }
     }
 }

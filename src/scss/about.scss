@@ -34,7 +34,7 @@
 
     &__left-side {
         @include mq('from', 768) {
-            max-width: 65%;
+            max-width: 62%;
         }
 
         @include mq('to', 768) {

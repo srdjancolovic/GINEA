@@ -4,8 +4,15 @@
     position: fixed;
     z-index: 10;
     width: 100%;
-    padding: 20px 0 15px;
     transition: $transition;
+
+    @include mq('from', 769) {
+        padding: 10px 0 8px;
+    }
+
+    @include mq('to', 769) {
+        padding: 8px 0 8px;
+    }
 
     &--scrolled {
         background-color: $primary-green;
@@ -26,8 +33,13 @@
     }
 
     &__logo {
-        max-width: 50px;
-        height: 50px;
+        @include mq('from', 769) {
+            height: 60px;
+        }
+
+        @include mq('to', 769) {
+            height: 50px;
+        }
     }
 
     &__hamburger {
@@ -96,12 +108,15 @@
             position: absolute;
             background-color: $white;
             width: 100%;
-            top: 85px;
             right: -100%;
             height: 100vh;
             flex-direction: column;
             align-items: center;
             padding: 0 20px;
+
+            @include mq('to', 769) {
+                top: 70px;
+            }
         }
 
         &--show {
