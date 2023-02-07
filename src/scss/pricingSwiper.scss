@@ -1,0 +1,41 @@
+@import './vars.scss';
+@import './global.scss';
+.pricing-swiper {
+    &__controls {
+        position: absolute;
+        width: 100%;
+        max-width: 150px;
+
+        @include mq('from', 768) {
+            bottom: 115px;
+        }
+
+        @include mq('to', 768) {
+            bottom: 135px;
+        }
+    }
+
+    &__btn {
+        background-color: $white;
+        color: $primary-green;
+        padding: 10px 20px;
+        border-radius: 4px;
+        opacity: 0.9;
+        transition: $transition;
+
+        @media (hover: hover) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__next-btn,
+    &__prev-btn {
+        -webkit-tap-highlight-color: transparent;
+        &::after {
+            font-size: 25px;
+            padding: 10px 25px;
+        }
+    }
+}

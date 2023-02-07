@@ -13,7 +13,9 @@
             rel="stylesheet"
         />
 
-        <title>Starting file heading</title>
+        <title>ZU GINEA | Ginekoloska ordinacija Banja Luka</title>
+        <link rel="shortcut icon" href="./assets/gineaIcon.ico" />
+        <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
@@ -72,6 +74,7 @@
             </div>
         </nav>
 
+        <!-- Landing page -->
         <main class="landing" id="main">
             <div class="landing__heading-btn">
                 <h1 class="landing__heading-main">GINEA</h1>
@@ -82,6 +85,7 @@
             </div>
         </main>
 
+        <!-- About section -->
         <section id="about">
             <div class="container container--section about">
                 <div class="about__content">
@@ -111,104 +115,317 @@
                     <div class="about__right-side">
                         <h2 class="scaleIn">Usluge</h2>
                         <ul>
+                            <li class="slideInUp">
+                                Ginekologija i obstetricija
+                            </li>
                             <li class="slideInUp">Ultrazvuk abdomena</li>
                             <li class="slideInUp">Ultrazvuk dojke</li>
                             <li class="slideInUp">
-                                Ultrazvuk stitaste zlijezde
+                                Ultrazvuk štitaste žlijezde
                             </li>
                             <li class="slideInUp">Fetalna ehokardiografija</li>
                             <li class="slideInUp">Hematologija</li>
+                            <li class="slideInUp">Endokrinologija</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Pricing section -->
         <section id="pricing">
             <div class="pricing">
-                <div
-                    class="pricing__content container container--section pricing__overlay"
-                >
-                    <h2>Cjenovnik</h2>
+                <div class="pricing__content container container--pricing">
+                    <h2 class="scaleIn">Cjenovnik</h2>
 
-                    <div class="pricing__boxes">
-                        <div class="pricing__box">
-                            <h3>Cijenovnik 1</h3>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                        </div>
+                    <div
+                        class="swiper pricing__boxes pricelist-swiper slideInUp"
+                    >
+                        <div class="swiper-wrapper pricing__boxes-wrapper">
+                            <div class="swiper-slide pricing__box">
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        4D sonografski pregled trudnice
+                                    </p>
+                                    <span class="pricing__price"
+                                        >120.00 KM</span
+                                    >
+                                </div>
 
-                        <div class="pricing__box">
-                            <h3>Cijenovnik 2</h3>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">
-                                    Ovo je neki duzi naziv kojie se ovde nalazi
-                                </p>
-                                <span class="pricing__price">1199.99 KM</span>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Incizija Bartolinijeve žlijezde
+                                    </p>
+                                    <span class="pricing__price"
+                                        >100.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Bris euretre
+                                    </p>
+                                    <span class="pricing__price">20.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">Bris vulve</p>
+                                    <span class="pricing__price">20.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Cervikalni bris
+                                    </p>
+                                    <span class="pricing__price">20.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Citološki bris
+                                    </p>
+                                    <span class="pricing__price">50.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">CTG</p>
+                                    <span class="pricing__price">20.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        CTG i akušerski pregled
+                                    </p>
+                                    <span class="pricing__price">40.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Dilatacija cervikalnog kanala
+                                    </p>
+                                    <span class="pricing__price"
+                                        >100.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Sistematski pregled (TVS, gin,
+                                        Citološki)
+                                    </p>
+                                    <span class="pricing__price"
+                                        >100.00 KM</span
+                                    >
+                                </div>
                             </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">1199.99 KM</span>
+
+                            <div class="swiper-slide pricing__box">
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Intercervikalna inseminacija
+                                    </p>
+                                    <span class="pricing__price"
+                                        >300.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Kiretaža cervikalnog kanala
+                                    </p>
+                                    <span class="pricing__price"
+                                        >100.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Kolposkopija
+                                    </p>
+                                    <span class="pricing__price">40.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Komplet briseva (CB, VB, CH, UP, MP)
+                                    </p>
+                                    <span class="pricing__price"
+                                        >100.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Konsultacije
+                                    </p>
+                                    <span class="pricing__price">50.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Kontrolni ginekološki pregled
+                                    </p>
+                                    <span class="pricing__price">20.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Kontrolni pregled specijaliste
+                                    </p>
+                                    <span class="pricing__price">40.00 KM</span>
+                                </div>
+
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Marsupijalizacija
+                                    </p>
+                                    <span class="pricing__price"
+                                        >200.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Humani papiloma virus (HPV) PCR
+                                    </p>
+                                    <span class="pricing__price"
+                                        >130.00 KM</span
+                                    >
+                                </div>
                             </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
+
+                            <div class="swiper-slide pricing__box">
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Folikulometrija
+                                    </p>
+                                    <span class="pricing__price">30.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Ginekološki pregled
+                                    </p>
+                                    <span class="pricing__price">30.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Histerosalpingografija HSG
+                                    </p>
+                                    <span class="pricing__price"
+                                        >200.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Histerosonosalpingografija
+                                    </p>
+                                    <span class="pricing__price"
+                                        >300.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Hlamidija bris imunofluorescencija
+                                    </p>
+                                    <span class="pricing__price">40.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Hlamidija bris PCR
+                                    </p>
+                                    <span class="pricing__price"
+                                        >120.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Ekstrakcija spirale
+                                    </p>
+                                    <span class="pricing__price">40.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        LEEP intervencija
+                                    </p>
+                                    <span class="pricing__price"
+                                        >350.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Biopsija grlića sa ekshohleacijom
+                                        endocerviksa | HP nalaz
+                                    </p>
+                                    <span class="pricing__price"
+                                        >200.00 KM</span
+                                    >
+                                </div>
                             </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">199.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
-                            </div>
-                            <div class="pricing__box-item">
-                                <p class="pricing__item-name">Naziv usluge</p>
-                                <span class="pricing__price">99.99 KM</span>
+
+                            <div class="swiper-slide pricing__box">
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Mikroplazma bris PCR
+                                    </p>
+                                    <span class="pricing__price"
+                                        >100.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Odstranjivanje kondiloma vagine
+                                    </p>
+                                    <span class="pricing__price"
+                                        >200.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Odstranjivanje kondiloma vulvae od 5 do
+                                        15
+                                    </p>
+                                    <span class="pricing__price"
+                                        >200.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Polipektomija
+                                    </p>
+                                    <span class="pricing__price">75.00 KM</span>
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Polipektomija i histopatološki nalaz
+                                    </p>
+                                    <span class="pricing__price"
+                                        >120.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">SIS</p>
+                                    <span class="pricing__price"
+                                        >150.00 KM</span
+                                    >
+                                </div>
+
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Fetalna ehokardiografija
+                                    </p>
+                                    <span class="pricing__price"
+                                        >120.00 KM</span
+                                    >
+                                </div>
+                                <div class="pricing__box-item">
+                                    <p class="pricing__item-name">
+                                        Kontrolni sonografski pregled male
+                                        karlice (do 2 nedelje)
+                                    </p>
+                                    <span class="pricing__price">35.00 KM</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pricing__wrap">
-                    <div class="pricing__bg"></div>
+                    <div class="pricing-swiper__controls container slideInUp">
+                        <div
+                            class="swiper-button-next pricing-swiper__btn pricing-swiper__next-btn"
+                        ></div>
+                        <div
+                            class="swiper-button-prev pricing-swiper__btn pricing-swiper__prev-btn"
+                        ></div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <div
-                class="contact container container--section container--contact"
-            >
+            <div class="contact container container--section">
                 <h2 class="scaleIn">Kontakt</h2>
 
                 <div class="contact__content">
@@ -250,7 +467,7 @@
                             <div class="contact__info-box slideInUp">
                                 <div class="contact__info-box-link">
                                     <a
-                                        href="mailto:ginea@info.com"
+                                        href="mailto:zu.ginea@gmail.com"
                                         target="_blank"
                                         ><i class="icon-email"></i
                                     ></a>
@@ -258,9 +475,9 @@
                                 <p>Email</p>
                                 <div class="contact__info-box-link">
                                     <a
-                                        href="mailto:ginea@info.com"
+                                        href="mailto:zu.ginea@gmail.com"
                                         target="_blank"
-                                        >ginea@info.com</a
+                                        >zu.ginea@gmail.com</a
                                     >
                                 </div>
                             </div>
@@ -314,6 +531,8 @@
         <script src="./js/gsap.js"></script>
         <!-- Jquery -->
         <script src="./js/jquery.js"></script>
+        <!-- Swiper -->
+        <script src="./js/swiper-bundle.min.js"></script>
         <!-- JS script -->
         <script src="./js/script.js"></script>
     </body>

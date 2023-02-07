@@ -109,7 +109,6 @@ window.addEventListener('load', () => {
     gsap.to('.preloader', { opacity: 0, zIndex: -10 });
     const timeline = gsap.timeline({ defaults: { duration: 0.5 } });
     timeline
-        .from('.landing__heading-btn', { y: 50, opacity: 0 })
 
         .from('.navigation__logo', {
             x: -30,
@@ -119,6 +118,7 @@ window.addEventListener('load', () => {
             x: 30,
             opacity: 0,
         })
+        .from('.landing__heading-btn', { y: 50, opacity: 0 })
         .from('.navigation__menu-link', { opacity: 0, stagger: 0.2 });
 });
 
@@ -132,6 +132,7 @@ const callback = function (entries) {
 };
 
 //Intersection observer
+
 const observer = new IntersectionObserver(callback, {
     root: null,
     threshold: 0.3,
@@ -185,4 +186,26 @@ scaleIn.forEach(function (item) {
 });
 Array.prototype.forEach.call(scaleIn, (el) => {
     observer.observe(el);
+});
+
+const menu = new Swiper('.pricelist-swiper', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        1025: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+
+        1400: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
 });

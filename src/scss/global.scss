@@ -94,7 +94,7 @@ h3 {
 p {
     font-size: 18px;
     color: $dark-grey;
-    line-height: 1.6;
+    line-height: 24px;
 
     @include mq('from', 768) {
         font-size: 18px;
@@ -137,16 +137,9 @@ li {
         padding-bottom: 80px;
     }
 
-    &--contact {
-        @include mq('from', 769) {
-            padding-top: 80px;
-            padding-bottom: 100px;
-        }
-
-        @include mq('to', 769) {
-            padding-top: 80px;
-            padding-bottom: 80px;
-        }
+    &--pricing {
+        padding-top: 80px;
+        padding-bottom: 160px;
     }
 }
 

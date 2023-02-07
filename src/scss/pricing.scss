@@ -1,0 +1,105 @@
+@import './global.scss';
+@import './vars.scss';
+
+#pricing {
+    @include navOffset;
+}
+
+.pricing {
+    position: relative;
+    width: 100%;
+    z-index: 7;
+    background-image: url('../assets/pricingBg.webp');
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.3);
+        z-index: -1;
+    }
+
+    //Content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            color: $black;
+        }
+    }
+
+    &__boxes {
+        width: 100%;
+        margin: 40px auto 0;
+        height: auto;
+    }
+
+    &__box {
+        color: $black;
+        background-color: $white;
+        border-radius: 4px;
+        padding: 35px 20px;
+        width: 100%;
+        opacity: 0.9;
+        cursor: grab;
+
+        @include mq('from', 1025) {
+            height: 470px;
+        }
+
+        @include mq('fromto', 769, 1025) {
+            height: 425px;
+        }
+
+        @include mq('fromto', 577, 769) {
+            height: 430px;
+        }
+
+        @include mq('fromto', 391, 577) {
+            height: 520px;
+        }
+
+        @include mq('to', 391) {
+            height: 515px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &:not(:last-child) {
+            @include mq('to', 768) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__box-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__item-name {
+        max-width: 66%;
+        word-break: break-word;
+    }
+
+    &__price {
+        text-align: right;
+        font-weight: 500;
+        line-height: 28px;
+    }
+}

@@ -6,10 +6,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/placeholder.webp');
-    background-position: center;
+    background-image: url('../assets/landingImg.webp');
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include mq('from', 577) {
+        background-position: center;
+    }
+
+    @include mq('to', 577) {
+        background-position: 25%;
+    }
 
     h3 {
         font-size: 25px;
