@@ -35,14 +35,16 @@
     &__logo {
         @include mq('from', 769) {
             height: 60px;
+            margin-left: -12px;
         }
 
         @include mq('to', 769) {
             height: 50px;
+            margin-left: -10px;
         }
     }
 
-    &__hamburger {
+    &__toggler {
         @include mq('from', 769) {
             display: none;
         }

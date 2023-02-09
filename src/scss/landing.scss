@@ -18,8 +18,24 @@
         background-position: 25%;
     }
 
-    h3 {
-        font-size: 25px;
+    h2 {
+        color: $white;
+        margin-top: 5px;
+        padding: 0 15px;
+
+        @include mq('from', 768) {
+            font-size: 28px;
+            line-height: 38px;
+        }
+
+        @include mq('to', 768) {
+            font-size: 25px;
+            line-height: 35px;
+        }
+
+        &::after {
+            display: none;
+        }
     }
 
     &::after {

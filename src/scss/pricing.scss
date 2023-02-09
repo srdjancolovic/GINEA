@@ -23,8 +23,6 @@
         z-index: -1;
     }
 
-    //Content
-
     &__content {
         display: flex;
         flex-direction: column;
@@ -51,11 +49,11 @@
         cursor: grab;
 
         @include mq('from', 1025) {
-            height: 470px;
+            height: 485px;
         }
 
         @include mq('fromto', 769, 1025) {
-            height: 425px;
+            height: 440px;
         }
 
         @include mq('fromto', 577, 769) {
@@ -63,11 +61,11 @@
         }
 
         @include mq('fromto', 391, 577) {
-            height: 520px;
+            height: 565px;
         }
 
         @include mq('to', 391) {
-            height: 515px;
+            height: 560px;
         }
 
         h3 {
@@ -95,6 +93,7 @@
     &__item-name {
         max-width: 66%;
         word-break: break-word;
+        line-height: 28px;
     }
 
     &__price {

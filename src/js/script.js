@@ -1,14 +1,14 @@
-const hamburger = document.querySelector('.navigation__hamburger');
+const hamburger = document.querySelector('.navigation__toggler');
 const navMenu = document.querySelector('.navigation__menu');
 const navLinks = document.querySelectorAll('.navigation__menu-link');
 const navigationBar = document.querySelector('.navigation');
 const body = document.querySelector('body');
 const progressBar = document.querySelector('.progress-bar');
-const topBtn = document.querySelector('.top-btn');
+const topBtn = document.querySelector('.go-to-top-btn');
 
 const toggleFn = () => {
     navMenu.classList.toggle('navigation__menu--show');
-    hamburger.classList.toggle('navigation__hamburger--toggle');
+    hamburger.classList.toggle('navigation__toggler--toggle');
 
     const innerWidth = window.innerWidth;
 
@@ -58,10 +58,10 @@ window.onscroll = () => {
 
     if (scrollFromTop > 0) {
         navigationBar.classList.add('navigation--scrolled');
-        topBtn.classList.add('top-btn--show');
+        topBtn.classList.add('go-to-top-btn--show');
     } else {
         navigationBar.classList.remove('navigation--scrolled');
-        topBtn.classList.remove('top-btn--show');
+        topBtn.classList.remove('go-to-top-btn--show');
     }
 
     return scrollFromTop;
@@ -150,30 +150,6 @@ slideInUpAnim.forEach(function (item) {
 });
 
 Array.prototype.forEach.call(slideInUpAnim, (el) => {
-    observer.observe(el);
-});
-
-///SlideInLeft
-const slideInLeftAnim = document.querySelectorAll('.slideInLeft');
-slideInLeftAnim.forEach(function (item) {
-    const action = gsap
-        .timeline({ paused: true })
-        .from(item, { x: -40, opacity: 0, duration: 0.6, delay: 0.5 });
-    item.timeline = action;
-});
-Array.prototype.forEach.call(slideInLeftAnim, (el) => {
-    observer.observe(el);
-});
-
-///SlideInRight
-const slideInRight = document.querySelectorAll('.slideInRight');
-slideInRight.forEach(function (item) {
-    const action = gsap
-        .timeline({ paused: true })
-        .from(item, { x: 40, opacity: 0, duration: 0.6, delay: 0.5 });
-    item.timeline = action;
-});
-Array.prototype.forEach.call(slideInRight, (el) => {
     observer.observe(el);
 });
 
