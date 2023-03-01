@@ -1,3 +1,4 @@
+'use-strict';
 const hamburger = document.querySelector('.navigation__toggler');
 const navMenu = document.querySelector('.navigation__menu');
 const navLinks = document.querySelectorAll('.navigation__menu-link');
@@ -5,7 +6,9 @@ const navigationBar = document.querySelector('.navigation');
 const body = document.querySelector('body');
 const progressBar = document.querySelector('.progress-bar');
 const topBtn = document.querySelector('.go-to-top-btn');
+const fetchBtn = document.querySelector('.fetch');
 
+//Toggle function
 const toggleFn = () => {
     navMenu.classList.toggle('navigation__menu--show');
     hamburger.classList.toggle('navigation__toggler--toggle');
@@ -21,6 +24,7 @@ const toggleFn = () => {
     }
 };
 
+//Scroll progress bar
 const scrollProgressBar = () => {
     let scrollDistance = body.getBoundingClientRect().top;
 
@@ -40,6 +44,7 @@ const scrollProgressBar = () => {
     }
 };
 
+//Event listeners
 window.addEventListener('scroll', scrollProgressBar);
 
 hamburger.addEventListener('click', () => {
@@ -184,4 +189,9 @@ const menu = new Swiper('.pricelist-swiper', {
             spaceBetween: 20,
         },
     },
+});
+
+//Lightbox options
+lightbox.option({
+    wrapAround: true,
 });

@@ -150,6 +150,24 @@ li {
     border-radius: 4px;
     position: relative;
 
+    &--secondary {
+        background-color: transparent;
+        border: 2px solid $primary-green;
+        color: $primary-green;
+        transition: $transition;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $primary-green;
+                color: $white;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
     @include mq('from', 768) {
         font-size: 18px;
         line-height: 20px;

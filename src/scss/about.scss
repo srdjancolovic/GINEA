@@ -18,6 +18,15 @@
         width: 100%;
         display: flex;
 
+        .btn {
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+                margin-right: 16px;
+            }
+        }
+
         @include mq('from', 768) {
             justify-content: flex-start;
         }

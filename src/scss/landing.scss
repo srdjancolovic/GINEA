@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../assets/landingImg.webp');
+    background-image: url('../assets/GineaLanding.webp');
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -15,7 +15,7 @@
     }
 
     @include mq('to', 577) {
-        background-position: 25%;
+        background-position: 45%;
     }
 
     h2 {
