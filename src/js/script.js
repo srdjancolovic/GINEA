@@ -158,6 +158,7 @@ Array.prototype.forEach.call(slideInUpAnim, (el) => {
     observer.observe(el);
 });
 
+///Scale in animation
 const scaleIn = document.querySelectorAll('.scaleIn');
 scaleIn.forEach(function (item) {
     const action = gsap
